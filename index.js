@@ -60,13 +60,13 @@ const promptUser = () => {
       {
         type: 'confirm',
         name: 'confirmAbout',
-        message: 'Would you like to include a table of contents?',
+        message: 'If your README is very long, add a table of contents to make it easy for users to find what they need. Would you like to include a table of contents?',
         default: true
       },
       {
         type: 'input',
         name: 'about',
-        message: 'Provide some information about the table of contents:',
+        message: 'Provide a brief description about the table of contents:',
         validate: tocInput => {
             if (tocInput) {
                 return true
@@ -86,7 +86,7 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'installation',
-        message: 'What are the steps required to install your project? (Required)',
+        message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running? (Required)',
         validate: installationInput => {
             if (installationInput) {
                 return true
@@ -99,7 +99,7 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'usage',
-        message: 'Describe the usage of the application! (Required)',
+        message: 'Provide instructions and examples for use. Include screenshots as needed.To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:```md![alt text](assets/images/screenshot.png)``` (Required)',
         validate: usageInput => {
             if (usageInput) {
                 return true
@@ -114,6 +114,37 @@ const promptUser = () => {
         name: 'license',
         message: 'Which license is the application covered under? (Check all that apply)',
         choices: ['MIT', 'BSD', 'ISC', 'Apache', 'GPL',]
+      },
+      {
+        type: 'input',
+        name: 'contributing',
+        message: 'If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. (Required)',
+        validate: contributeInput => {
+            if (contributeInput) {
+                return true
+            }else {
+                console.log('Please enter your project Title!')
+                return false
+            }
+        }
+      },
+      {
+        type: 'input',
+        name: 'tests',
+        message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them.',
+      },
+      {
+        type: 'input',
+        name: 'questions',
+        message: 'enter your github username with link to github profile, an email and instructions on how to reach you with additional questions. (Required)',
+        validate: titleInput => {
+            if (titleInput) {
+                return true
+            }else {
+                console.log('Please enter your project Title!')
+                return false
+            }
+        }
       },
     ]);
   };
