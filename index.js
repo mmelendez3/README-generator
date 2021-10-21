@@ -1,45 +1,22 @@
 // // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs')
-const generatePage = require('./utils/generateMarkdown')
+// const generatePage = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown')
 
 
 // // TODO: Create an array of questions for user input
-// const questions = [];
+const questions = [
 
-
-// // TODO: Create a function to write README file
-// // function writeToFile(fileName, data) {}
-
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
-
-//Code For Project starts HERE 
-
-// const profileDataArgs = process.argv.slice(2, process.argv.length);
-
-// const [name, github] = profileDataArgs
-
-
-
-
-
-const promptUser = () => {
-    return inquirer.prompt([
       {
         type: 'input',
         name: 'title',
-        message: 'What is the name of your project title? (Required)',
+        message: 'What is the name of your project title?',
         validate: titleInput => {
             if (titleInput) {
                 return true
             }else {
-                console.log('Please enter your project Title!')
+                console.log('Please enter your project Title.')
                 return false
             }
         }
@@ -47,7 +24,7 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'description',
-        message: 'give a short description explaining the what, why, and how. What was your motivation? Why did you build this project? (Required)',
+        message: 'give a short description of the project.',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true
@@ -58,35 +35,9 @@ const promptUser = () => {
         }
       },
       {
-        type: 'confirm',
-        name: 'confirmAbout',
-        message: 'If your README is very long, add a table of contents to make it easy for users to find what they need. Would you like to include a table of contents?',
-        default: true
-      },
-      {
-        type: 'input',
-        name: 'about',
-        message: 'Provide a brief description about the table of contents:',
-        validate: tocInput => {
-            if (tocInput) {
-                return true
-            }else {
-                console.log('Please enter a brief description for table of contents! (Required) ')
-                return false
-            }
-        },
-        when: ({confirmAbout}) => {
-            if (confirmAbout) {
-                return true
-            }else {
-                return false
-            }
-        }
-    },
-      {
         type: 'input',
         name: 'installation',
-        message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running? (Required)',
+        message: 'What are the steps required to install your project?',
         validate: installationInput => {
             if (installationInput) {
                 return true
@@ -99,7 +50,7 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions and examples for use. Include screenshots as needed.To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:```md![alt text](assets/images/screenshot.png)``` (Required)',
+        message: 'Provide instructions and examples for use. Include screenshots as needed.',
         validate: usageInput => {
             if (usageInput) {
                 return true
@@ -113,7 +64,7 @@ const promptUser = () => {
         type: 'list',
         name: 'license',
         message: 'Which license is the application covered under? (Check all that apply)',
-        choices: ['MIT', 'BSD', 'ISC', 'Apache', 'GPL',]
+        choices: ['MIT', 'BSD', 'Apache', 'GPL', 'Unlicensed']
       },
       {
         type: 'input',
@@ -131,32 +82,69 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'tests',
-        message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them.',
+        message: 'provide examples on how to test this application.',
       },
       {
         type: 'input',
-        name: 'questions',
-        message: 'enter your github username with link to github profile, an email and instructions on how to reach you with additional questions. (Required)',
+        name: 'username',
+        message: 'enter your github username. (Required)',
         validate: titleInput => {
             if (titleInput) {
                 return true
             }else {
-                console.log('Please enter your project Title!')
+                console.log('Please enter your github username!')
                 return false
             }
         }
       },
-    ]);
-  };
+      {
+        type: 'input',
+        name: 'email',
+        message: 'enter your email. (Required)',
+        validate: titleInput => {
+            if (titleInput) {
+                return true
+            }else {
+                console.log('Please enter your email!')
+                return false
+            }
+        }
+      },
+    
   
-  promptUser()
-  .then(portfolioData => {
-      const pageREADME = generatePage(portfolioData)
 
-      fs.writeFile('README.md', pageREADME, err => {
-       if (err) throw new Error (err);
+]
+  
+//   promptUser()
+//   .then(portfolioData => {
+//       const pageREADME = generatePage(portfolioData)
+
+//       fs.writeFile('./dist/README.md', pageREADME, err => {
+//        if (err) throw new Error (err);
   
       
-   });
+//    });
 
-  })
+//   })
+
+  // // TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, function(err) {
+        if (err) {
+            return console.log("ERROR: " + err)
+        }
+    })
+}
+
+
+// // TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions).then((responses) => {
+        console.log("creating readme")
+        writeToFile("./dist/README.md", generateMarkdown(responses))
+    })
+} 
+
+
+  // // Function call to initialize app
+init()

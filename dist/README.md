@@ -1,7 +1,4 @@
-
- 
-  
-  ## Table of Contents 
+## Table of Contents 
 
   
   * [Description](#description)
@@ -14,12 +11,12 @@
   * [Questions](#questions)
     
   
-# a
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# w
+![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]
 
 ## Description 
 
-a
+s
 
 
 ## Installation
@@ -30,26 +27,26 @@ a
 
 ## Usage 
 
-a
+e
 
-MIT
+BSD
 
 ## License
-This project is licensed under MIT(https://opensource.org/licenses/MIT)
+This project is licensed under BSD(https://opensource.org/licenses/BSD-3-Clause)
 
 
 
 ## Contributing
 
-a
+f
 
 
 ## Tests
 
-a
+w
 
 ## Questions
 
 Find me on GitHub: https://github.com/a
-Email me with questions: a
+Email me with questions: e
 

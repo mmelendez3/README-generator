@@ -1,100 +1,108 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license == "MIT") {
+    return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
+  } else if (license == "BSD") {
+    return `![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]`
+  } else if (license == "Apache") {
+    return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]`
+  } else if (license == "GPL") {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`
+  } else if (license == "No License") {
+    return ''
+  }
+}
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+
+function renderLicenseLink(license) {
+  if (license == "MIT") {
+    return `(https://opensource.org/licenses/MIT)`
+  } else if (license == "BSD") {
+    return `(https://opensource.org/licenses/BSD-3-Clause)`
+  } else if (license == "Apache") {
+    return `(https://opensource.org/licenses/Apache-2.0)`
+  } else if (license == "GPL") {
+    return `(https://www.gnu.org/licenses/gpl-3.0)`
+  } else if (license == "No License") {
+    return ''
+  }
+}
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  let renderLicense
+  if (license === 'Unlicensed') {
+    renderLicense = ""
+  }
+  else {
+    renderLicense = `## License
+This project is licensed under ${license}` + renderLicenseLink(license)
+
+  }
+  return renderLicense
+}
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+ return `## Table of Contents 
 
-`;
-}
-
-module.exports = generateMarkdown;
-
-
-//create the table of contents section
-const generateAbout = aboutText => {
-  if(!aboutText) {
-    return ""
-  }
-  return `
-## Table of Contents 
-
-${aboutText}
   
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-  `;
-}
-
-module.exports = generateMarkdownData => {
-  const {about} = generateMarkdownData
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+    
   
-  return`# ${generateMarkdownData.title}
+# ${data.title}
+${renderLicenseBadge(data.license)}
 
 ## Description 
 
-${generateMarkdownData.description}
+${data.description}
 
-${generateAbout(about)}
+
 ## Installation
+Follow these instructions to install the application.
 
-${generateMarkdownData.installation}
+${data.installation}
 
 
 ## Usage 
 
-${generateMarkdownData.usage}
+${data.usage}
 
+${data.license}
 
+${renderLicenseSection(data.license)}
 
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-
-## License
-
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
-
-
----
-
-🏆 The sections listed above are the minimum for a good README, but your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
 
 ## Contributing
 
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
+${data.contributing}
+
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
+${data.tests}
 
 ## Questions
 
+Find me on GitHub: https://github.com/${data.username}
+Email me with questions: ${data.email}
 
 `;
 };
 
+module.exports = generateMarkdown
