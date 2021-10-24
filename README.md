@@ -28,10 +28,12 @@ You can quickly and easily generate a README file by using a command-line applic
 This project is licensed under MIT(https://opensource.org/licenses/MIT)
 
 
+## Walkthrough Video
+Link to view the walkthrough demonstration
 
 ## Questions
 
 contact info:
-GitHub: https://github.com/mmelendez3
-Email me with questions: mele0019@gmail.com
+  - GitHub: https://github.com/mmelendez3
+  - Email me with questions: mele0019@gmail.com
 

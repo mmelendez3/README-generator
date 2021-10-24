@@ -11,42 +11,42 @@
   * [Questions](#questions)
     
   
-# w
-![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]
+# Weather Dashboard
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description 
 
-s
+sdfas
 
 
 ## Installation
 Follow these instructions to install the application.
 
-a
+adfasd
 
 
 ## Usage 
 
-e
+asdfasfd
 
-BSD
+MIT
 
 ## License
-This project is licensed under BSD(https://opensource.org/licenses/BSD-3-Clause)
+This project is licensed under MIT(https://opensource.org/licenses/MIT)
 
 
 
 ## Contributing
 
-f
+fd
 
 
 ## Tests
 
-w
+sdf
 
 ## Questions
 
-Find me on GitHub: https://github.com/a
-Email me with questions: e
+Find me on GitHub: https://github.com/sdf
+Email me with questions: sdf
 
