@@ -16,20 +16,20 @@
 
 ## Description 
 
-sdfas
+The weather dashboard app is an interactive website that allows users to search a city and returns a 5 day forecast and the current temp, humidity, wind speed and uv index
 
 
 ## Installation
 Follow these instructions to install the application.
 
-adfasd
-
+Link showing a runthrough 
+[Video Link](https://drive.google.com/file/d/1pQzuImT95AqBz7gf0VYUyrNk6ctYdDRp/view)
 
 ## Usage 
 
-asdfasfd
+The weather app is a useful tool for everyone. Current temps for your current location can be received.
 
-MIT
+
 
 ## License
 This project is licensed under MIT(https://opensource.org/licenses/MIT)
@@ -38,15 +38,15 @@ This project is licensed under MIT(https://opensource.org/licenses/MIT)
 
 ## Contributing
 
-fd
+Does not apply to current application
 
 
 ## Tests
 
-sdf
+Testing only required to input any city and recieve data back
 
 ## Questions
 
-Find me on GitHub: https://github.com/sdf
-Email me with questions: sdf
+Find me on GitHub: https://github.com/https://github.com/mmelendez3
+Email me with questions: mele0019@gmail.com
 

@@ -82,7 +82,7 @@ ${data.installation}
 
 ${data.usage}
 
-${data.license}
+
 
 ${renderLicenseSection(data.license)}
 

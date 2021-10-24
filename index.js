@@ -114,17 +114,6 @@ const questions = [
 
 ]
   
-//   promptUser()
-//   .then(portfolioData => {
-//       const pageREADME = generatePage(portfolioData)
-
-//       fs.writeFile('./dist/README.md', pageREADME, err => {
-//        if (err) throw new Error (err);
-  
-      
-//    });
-
-//   })
 
   // // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
