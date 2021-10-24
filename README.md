@@ -4,7 +4,6 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Credits](#credits)
   * [License](#license)
   * [Questions](#questions)
     
@@ -26,7 +25,6 @@ You can quickly and easily generate a README file by using a command-line applic
 
 ## License
 This project is licensed under MIT(https://opensource.org/licenses/MIT)
-
 
 
 ## Questions
