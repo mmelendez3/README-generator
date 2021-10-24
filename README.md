@@ -15,7 +15,7 @@
 The Readme generator is a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
 
  ## Walkthrough video
-  Please view the walkthrough of this application at this link: [Video Link]()
+  Please view the walkthrough of this application at this link: [Video Link](https://drive.google.com/file/d/1NrC2w9OwnrJpvWDwuNNUsYqvfXM8x6AU/view)
 
 
 ## Installation
