@@ -29,7 +29,8 @@ This project is licensed under MIT(https://opensource.org/licenses/MIT)
 
 
 ## Walkthrough Video
-Link to view the walkthrough demonstration
+Link showing a runthrough 
+[Video Link](https://drive.google.com/file/d/1pQzuImT95AqBz7gf0VYUyrNk6ctYdDRp/view)
 
 ## Questions
 

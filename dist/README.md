@@ -22,8 +22,7 @@ The weather dashboard app is an interactive website that allows users to search 
 ## Installation
 Follow these instructions to install the application.
 
-Link showing a runthrough 
-[Video Link](https://drive.google.com/file/d/1pQzuImT95AqBz7gf0VYUyrNk6ctYdDRp/view)
+
 
 ## Usage 
 
