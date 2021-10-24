@@ -4,34 +4,49 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Credits](#credits)
   * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
   * [Questions](#questions)
     
   
-# Professional Readme Generator
+# Weather Dashboard
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Description
-The Readme generator is a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
+## Description 
 
-## Walkthrough Video
-Video showing walkthrough [Video Link] (https://drive.google.com/file/d/1NrC2w9OwnrJpvWDwuNNUsYqvfXM8x6AU/view)
+The Weather Dashboard app is an interactive website that allows users to search a city and returns the current temp, humidty, wind speed, and UV index.
+
 
 ## Installation
-In this application you will need to node.js, the 'fs' and Inquirer NPM packages.
+Follow these instructions to install the application.
+
+The app can be directly run by visiting the live link
 
 
 ## Usage 
-You can quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
+
+The weather app is a very usefull tool for everyone.  Weather in your current location can be returned as often as desired.
+
 
 
 ## License
 This project is licensed under MIT(https://opensource.org/licenses/MIT)
 
 
+
+## Contributing
+
+Does not apply to current application
+
+
+## Tests
+
+Testing only requires to input any city and recieve data
+
 ## Questions
 
-contact info:
-  - GitHub: https://github.com/mmelendez3
-  - Email me with questions: mele0019@gmail.com
+Find me on GitHub: https://github.com/https://github.com/memelendez3
+Email me with questions: mele0019@gmail.com
 

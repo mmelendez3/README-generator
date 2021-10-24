@@ -122,6 +122,8 @@ function writeToFile(fileName, data) {
             return console.log("ERROR: " + err)
         }
     })
+
+    
 }
 
 
